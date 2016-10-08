@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BearBot.Web", "BearBot.Web\BearBot.Web.csproj", "{AD9A6CA7-1A6C-4651-B9FF-68C83D8D33FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BearBot.Core", "BearBot.Core\BearBot.Core.csproj", "{B278B1F6-71D4-4847-98A1-7F2C10992AE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BearBot.Infrastructure", "BearBot.Infrastructure\BearBot.Infrastructure.csproj", "{1F0009EB-4CCC-4FA2-B81E-BD5162A40BB3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD9A6CA7-1A6C-4651-B9FF-68C83D8D33FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD9A6CA7-1A6C-4651-B9FF-68C83D8D33FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD9A6CA7-1A6C-4651-B9FF-68C83D8D33FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD9A6CA7-1A6C-4651-B9FF-68C83D8D33FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B278B1F6-71D4-4847-98A1-7F2C10992AE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B278B1F6-71D4-4847-98A1-7F2C10992AE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B278B1F6-71D4-4847-98A1-7F2C10992AE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B278B1F6-71D4-4847-98A1-7F2C10992AE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F0009EB-4CCC-4FA2-B81E-BD5162A40BB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F0009EB-4CCC-4FA2-B81E-BD5162A40BB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F0009EB-4CCC-4FA2-B81E-BD5162A40BB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F0009EB-4CCC-4FA2-B81E-BD5162A40BB3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

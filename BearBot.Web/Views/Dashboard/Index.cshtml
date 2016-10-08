@@ -1,0 +1,190 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container container-spacious">
+    <div class="dashhead m-t-md">
+        <div class="dashhead-titles">
+            <h2 class="dashhead-title">Dashboard</h2>
+        </div>
+
+        <!--
+        <div class="btn-toolbar dashhead-toolbar">
+          <div class="btn-toolbar-item input-with-icon">
+            <input type="text" value="01/01/15 - 01/08/15" class="form-control" data-provide="datepicker">
+            <span class="icon icon-calendar"></span>
+          </div>
+        </div>
+        -->
+    </div>
+
+    <div class="hr-divider m-t m-b-md">
+        <h3 class="hr-divider-content hr-divider-heading">Last Run</h3>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 col-md-3 m-b">
+            <div class="statcard">
+                <div class="p-a">
+                    <span class="statcard-desc">Runtime</span>
+                    <h2 class="statcard-number">
+                        1:20
+                    </h2>
+                </div>
+            </div>
+            <div class="statcard">
+                <div class="p-a">
+                    <span class="statcard-desc">Scenarios</span>
+                    <h2 class="statcard-number">
+                        3/15
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-3 m-b">
+            <div class="list-group">
+                <a class="list-group-item" style="background-color: #1bc98e; color: black;" href="#">
+                    <span class="pull-right text-muted" style="color:black">✓</span>
+                    Scenario 1
+                </a>
+                <a class="list-group-item" style="background-color: #e64759; color: black;" href="#">
+                    <span class="pull-right text-muted" style="color:black">✓</span>
+                    Scenario 2
+                </a>
+                <a class="list-group-item" style="background-color: #1bc98e; color: black" href="#">
+                    <span class="pull-right text-muted" style="color:black">✓</span>
+                    Scenario 3
+                </a>
+                <a class="list-group-item" href="#">
+                    <span class="pull-right text-muted"></span>
+                    Scenario 4
+                </a>
+                <a class="list-group-item" href="#">
+                    <span class="pull-right text-muted"></span>
+                    Scenario 5
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-3 m-b">
+            <div class="list-group">
+                <a class="list-group-item" href="#">
+                    <span class="pull-right text-muted"></span>
+                    Scenario 1
+                </a>
+                <a class="list-group-item" href="#">
+                    <span class="pull-right text-muted"></span>
+                    Scenario 2
+                </a>
+                <a class="list-group-item" href="#">
+                    <span class="pull-right text-muted"></span>
+                    Scenario 3
+                </a>
+                <a class="list-group-item" href="#">
+                    <span class="pull-right text-muted"></span>
+                    Scenario 4
+                </a>
+                <a class="list-group-item" href="#">
+                    <span class="pull-right text-muted"></span>
+                    Scenario 5
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-3 m-b">
+            <div class="list-group">
+                <a class="list-group-item" href="#">
+                    <span class="pull-right text-muted"></span>
+                    Scenario 1
+                </a>
+                <a class="list-group-item" href="#">
+                    <span class="pull-right text-muted"></span>
+                    Scenario 2
+                </a>
+                <a class="list-group-item" href="#">
+                    <span class="pull-right text-muted"></span>
+                    Scenario 3
+                </a>
+                <a class="list-group-item" href="#">
+                    <span class="pull-right text-muted"></span>
+                    Scenario 4
+                </a>
+                <a class="list-group-item" href="#">
+                    <span class="pull-right text-muted"></span>
+                    Scenario 5
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="hr-divider m-y-md">
+        <ul class="nav nav-pills hr-divider-content hr-divider-nav" role="tablist">
+            <li class="active" role="presentation">
+                <a href="#sales" role="tab" data-toggle="tab" aria-controls="sales">Weekly</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="sales">
+            <canvas id="Sun" class="col-sm-6 col-md-3 m-b" height="300" style=""></canvas>
+            <canvas id="Mon" class="col-sm-6 col-md-3 m-b" height="300" style=""></canvas>
+            <canvas id="Tue" class="col-sm-6 col-md-3 m-b" height="300" style=""></canvas>
+            <canvas id="Wed" class="col-sm-6 col-md-3 m-b" height="300" style=""></canvas>
+            <canvas id="Thu" class="col-sm-6 col-md-3 m-b" height="300" style=""></canvas>
+            <canvas id="Fri" class="col-sm-6 col-md-3 m-b" height="300" style=""></canvas>
+            <canvas id="Sat" class="col-sm-6 col-md-3 m-b" height="300" style=""></canvas>
+        </div>
+    </div>
+</div>
+
+@section FooterScript {
+<script src="@Url.Content("~/Assets/docs/assets/js/jquery.min.js")"></script>
+<script src="@Url.Content("~/Assets/docs/assets/js/chart.js")"></script>
+<script src="@Url.Content("~/Assets/docs/assets/js/tablesorter.min.js")"></script>
+<script src="@Url.Content("~/Assets/docs/assets/js/toolkit.js")"></script>
+<script src="@Url.Content("~/Assets/docs/assets/js/application.js")"></script>
+<script>
+      // execute/clear BS loaders for docs
+      $(function(){while(window.BS&&window.BS.loader&&window.BS.loader.length){(window.BS.loader.pop())()}})
+
+      function paintCanvas(id) {
+        var canvas = document.getElementById(id);
+        var ctx = canvas.getContext("2d");
+
+        var padding_top = 40;
+        var spacing = 5;
+        var size = 10;
+        ctx.fillStyle = "rgb(67,72,87)";
+
+        ctx.font = "30px Roboto";
+        ctx.fillText(id,40,30);
+
+        var count = 0;
+        for(var y=0;y<12;y++) {
+          for(var x=0;x<12;x++) {
+
+            if(id == 'Sat' || (id == 'Fri' && count > 80)) {
+              ctx.fillStyle = "rgb(67,72,87)";
+            } else if (Math.random() > 0.05) {
+              ctx.fillStyle = "#527F71";
+            } else {
+              ctx.fillStyle = "#e64759";
+            }
+
+            ctx.fillRect((size + spacing)*x, padding_top + (size + spacing)*y + spacing, size, size);
+            count++;
+          }
+        }
+      }
+
+      $(document).ready(function() {
+        paintCanvas("Sun")
+        paintCanvas("Mon")
+        paintCanvas("Tue")
+        paintCanvas("Wed")
+        paintCanvas("Thu")
+        paintCanvas("Fri")
+        paintCanvas("Sat")
+      });
+</script>
+}
