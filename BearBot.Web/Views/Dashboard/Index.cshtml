@@ -29,7 +29,7 @@
                 <div class="p-a">
                     <span class="statcard-desc">Runtime</span>
                     <h2 class="statcard-number">
-                        1:20
+                        @Model.RunTime
                     </h2>
                 </div>
             </div>
@@ -37,83 +37,43 @@
                 <div class="p-a">
                     <span class="statcard-desc">Scenarios</span>
                     <h2 class="statcard-number">
-                        3/15
+                        @Model.CurrentScenario/@Model.TotalScenarios
                     </h2>
                 </div>
             </div>
         </div>
-        <div class="col-sm-6 col-md-3 m-b">
-            <div class="list-group">
-                <a class="list-group-item" style="background-color: #1bc98e; color: black;" href="#">
-                    <span class="pull-right text-muted" style="color:black">✓</span>
-                    Scenario 1
-                </a>
-                <a class="list-group-item" style="background-color: #e64759; color: black;" href="#">
-                    <span class="pull-right text-muted" style="color:black">✓</span>
-                    Scenario 2
-                </a>
-                <a class="list-group-item" style="background-color: #1bc98e; color: black" href="#">
-                    <span class="pull-right text-muted" style="color:black">✓</span>
-                    Scenario 3
-                </a>
-                <a class="list-group-item" href="#">
-                    <span class="pull-right text-muted"></span>
-                    Scenario 4
-                </a>
-                <a class="list-group-item" href="#">
-                    <span class="pull-right text-muted"></span>
-                    Scenario 5
-                </a>
+        @foreach (var listGroup in Model.ScenariosNodes)
+        {
+            <div class="col-sm-6 col-md-3 m-b">
+                <div class="list-group">
+                    @foreach (var scenario in listGroup)
+                    {
+                        if ((int)scenario.LastRunStatus == 0)
+                        {
+                            <a class="list-group-item" href="#">
+                                <span class="pull-right text-muted"></span>
+                                @scenario.Name
+                            </a>
+                        }
+                        if ((int)scenario.LastRunStatus == 1)
+                        {
+                            <a class="list-group-item" style="background-color: #1bc98e; color: black;" href="#">
+                                <span class="pull-right text-muted" style="color:black">✓</span>
+                                @scenario.Name
+                            </a>
+                        }
+                        if ((int)scenario.LastRunStatus == 2)
+                        {
+                            <a class="list-group-item" style="background-color: #e64759; color: black;" href="#">
+                                <span class="pull-right text-muted" style="color:black">✓</span>
+                                @scenario.Name
+                            </a>
+                        }
+                    }
+                </div>
             </div>
-        </div>
-        <div class="col-sm-6 col-md-3 m-b">
-            <div class="list-group">
-                <a class="list-group-item" href="#">
-                    <span class="pull-right text-muted"></span>
-                    Scenario 1
-                </a>
-                <a class="list-group-item" href="#">
-                    <span class="pull-right text-muted"></span>
-                    Scenario 2
-                </a>
-                <a class="list-group-item" href="#">
-                    <span class="pull-right text-muted"></span>
-                    Scenario 3
-                </a>
-                <a class="list-group-item" href="#">
-                    <span class="pull-right text-muted"></span>
-                    Scenario 4
-                </a>
-                <a class="list-group-item" href="#">
-                    <span class="pull-right text-muted"></span>
-                    Scenario 5
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-3 m-b">
-            <div class="list-group">
-                <a class="list-group-item" href="#">
-                    <span class="pull-right text-muted"></span>
-                    Scenario 1
-                </a>
-                <a class="list-group-item" href="#">
-                    <span class="pull-right text-muted"></span>
-                    Scenario 2
-                </a>
-                <a class="list-group-item" href="#">
-                    <span class="pull-right text-muted"></span>
-                    Scenario 3
-                </a>
-                <a class="list-group-item" href="#">
-                    <span class="pull-right text-muted"></span>
-                    Scenario 4
-                </a>
-                <a class="list-group-item" href="#">
-                    <span class="pull-right text-muted"></span>
-                    Scenario 5
-                </a>
-            </div>
-        </div>
+        }
+        
     </div>
 
     <div class="hr-divider m-y-md">

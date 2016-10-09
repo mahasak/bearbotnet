@@ -40,9 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enumeration\ScenarioLastRunStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModel\Dashboard.cs" />
-    <Compile Include="ViewModel\Scenario.cs" />
+    <Compile Include="Model\Dashboard.cs" />
+    <Compile Include="Model\Scenario.cs" />
+    <Compile Include="ViewModel\DashboardViewModel.cs" />
+    <Compile Include="ViewModel\ScenarioViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Extension\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
