@@ -1,6 +1,9 @@
 # BearBot
 
-Demonstrationon how to use Metrics.Net with InfluxDb and Grafana to visualize ASP.Net MVC Web Application for scalable application
+## Prerequisite
+- Visual Studio 2015
+- Chrome
+
 ## configuration
 - Web.Config
   - AppSettings
