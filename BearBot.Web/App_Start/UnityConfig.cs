@@ -42,6 +42,7 @@ namespace BearBot.Web
 
             // TODO: Register your types here
             container.RegisterType<IBearBotMetric, BearBotMetric>(new ContainerControlledLifetimeManager());
+            container.RegisterType<IBearMasterService, BearMasterService>();
             container.RegisterType<IScenarioRepository, ScenarioRepository>();
             container.RegisterType<IDashboardService, DashboardService>();
         }

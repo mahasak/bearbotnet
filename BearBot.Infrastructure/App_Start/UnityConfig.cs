@@ -2,8 +2,12 @@ using System;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
 using BearBot.Infrastructure.Bot.Metrics;
+using BearBot.Infrastructure.Service.Interface;
+using BearBot.Infrastructure.Service;
+using BearBot.Infrastructure.Repository.Interface;
+using BearBot.Infrastructure.Repository;
 
-namespace BearBot.Infrastructure.App_Start
+namespace BearBot.Infrastructure
 {
     /// <summary>
     /// Specifies the Unity configuration for the main container.
@@ -38,6 +42,8 @@ namespace BearBot.Infrastructure.App_Start
 
             // TODO: Register your types here
             container.RegisterType<IBearBotMetric, BearBotMetric>();
+            container.RegisterType<IScenarioRepository, ScenarioRepository>();
+            container.RegisterType<IBearMasterService, BearMasterService>();
         }
     }
 }

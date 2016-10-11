@@ -29,7 +29,8 @@ namespace BearBot.Web
                 .WithHttpEndpoint("http://localhost:1234/")
                 .WithAllCounters();
             var bearbotMetrics = UnityConfig.GetConfiguredContainer().Resolve<IBearBotMetric>();
-            BearSlaveMaster.Roar(bearbotMetrics, Convert.ToInt32(ConfigurationManager.AppSettings["botInterval"]));
+            var bearMaster = new BearSlaveMaster();
+            bearMaster.Roar(bearbotMetrics, Convert.ToInt32(ConfigurationManager.AppSettings["botInterval"]));
         }
     }
 }

@@ -88,6 +88,10 @@
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Npgsql, Version=3.1.8.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.3.1.8\lib\net451\Npgsql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="nunit.framework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.5.0\lib\net45\nunit.framework.dll</HintPath>
       <Private>True</Private>
@@ -156,6 +160,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\scenarioRepository.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="Bot\ActionStep\GoToWebsite.cs" />
@@ -166,18 +171,20 @@
     <Compile Include="Bot\Job\SimpleScenarioJob.cs" />
     <Compile Include="Bot\PageObject\CommonPage.cs" />
     <Compile Include="Bot\Selenium\SeleniumHooks.cs" />
+    <Compile Include="Database\BearDbConnection.cs" />
     <Compile Include="Extension\LinqExtension.cs" />
     <Compile Include="Bot\Metrics\BearBotMetric.cs" />
     <Compile Include="Bot\Metrics\IBearBotMetric.cs" />
+    <Compile Include="Mock\ScenarioRepositoryMock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\Interface\IScenarioRepository.cs" />
     <Compile Include="Repository\ScenarioRepository.cs" />
+    <Compile Include="Service\BearMasterService.cs" />
     <Compile Include="Service\DashboardService.cs" />
+    <Compile Include="Service\Interface\IBearMasterService.cs" />
     <Compile Include="Service\Interface\IDashboardService.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Mock\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BearBot.Core\BearBot.Core.csproj">
       <Project>{b278b1f6-71d4-4847-98a1-7f2c10992ae0}</Project>
