@@ -1,0 +1,16 @@
+-- Table: public.scenario
+
+-- DROP TABLE public.scenario;
+
+CREATE TABLE public.scenario
+(
+  id bigint NOT NULL,
+  name character varying(100),
+  story text,
+  CONSTRAINT pk_story PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.scenario
+  OWNER TO bearbot;
